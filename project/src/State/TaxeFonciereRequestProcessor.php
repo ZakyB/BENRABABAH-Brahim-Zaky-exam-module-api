@@ -4,7 +4,6 @@ namespace App\State;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
-use App\ApiResource\TaxeFonciereRequest;
 use App\Services\TaxeFonciereService;
 
 class TaxeFonciereRequestProcessor implements ProcessorInterface
