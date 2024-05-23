@@ -26,8 +26,11 @@ use Symfony\Component\Serializer\Attribute\Groups;
         ),
         new Post(
             denormalizationContext: ['groups' => ['mairie:write']],
+            security: "is_authenticated()"
         ),
-        new Delete()
+        new Delete(
+            security: "is_authenticated()"
+        )
     ]
 )]
 #[ApiFilter(SearchFilter::class, properties: ["departement.region" => "exact", "departement" => "exact", "codePostal" => "exact", "ville" => "partial"])]
